@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="App">
+<head>
+    <script type="text/javascript" src="../assets/js/angular-1.1.2.min.js"></script>
+    <script>
+        // Fire a deviceReady event after 2 seconds
+        setTimeout(function () {
+            var event = document.createEvent('UIEvents');
+            event.initEvent('deviceReady', true, false);
+            document.dispatchEvent(event);
+        }, 2000);
+
+        // Create a Navigator service in a cordova module
+        angular
+                .module('Cordova', [])
+                .factory('Navigator', function () {
+                    var Navigator = function () {
+                        this.ready = false;
+                    };
+                    Navigator.prototype.isDeviceReady = function () {
+                        return this.ready;
+                    };
+                    Navigator.prototype.setDeviceReady = function () {
+                        this.ready = true;
+                        console.log("Device is now ready");
+                    }
+                    return new Navigator();
+                })
+                .run(function (Navigator) {
+                    document.addEventListener('deviceReady', function (event) {
+                        Navigator.setDeviceReady();
+                    });
+                });
+        angular
+                .module('App', ['Cordova'])
+                .controller('Controller', function($scope, Navigator) {
+                    $scope.click = function() {
+                        alert(Navigator.isDeviceReady());
+                    }
+                })
+                .controller('Controller2', function($scope, Navigator) {
+                    $scope.click = function() {
+                        alert(Navigator.isDeviceReady());
+                    }
+                });
+    </script>
+</head>
+<body>
+<button ng-controller="Controller" ng-click="click()">Test the promise</button>
+<button ng-controller="Controller2" ng-click="click()">Test the promise</button>
+</body>
+</html>

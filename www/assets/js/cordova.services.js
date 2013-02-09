@@ -19,7 +19,7 @@ angular
 
         return new Navigator($q.defer());
     })
-    .factory('Accelerometer', function (Navigator, $rootScope) {
+    .factory('Accelerometer', function (Navigator) {
         return {
             getCurrentAcceleration: function (onSuccess, onError) {
                 Navigator.do(function () {

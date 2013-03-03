@@ -6,7 +6,7 @@ beforeEach(function () {
     };
 
     module('app', function ($provide) {
-        $provide.value('$window', mock);
+        //$provide.value('$window', mock);
     });
 });
 

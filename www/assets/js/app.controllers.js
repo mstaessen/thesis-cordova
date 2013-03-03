@@ -1,12 +1,16 @@
 angular
     .module('app.controllers', [])
-    .controller('AnotherController', function ($scope) {
-        $scope.initAnotherModel = function () {
-            return 'anotherModel';
+    .controller('FlashController', function ($scope, FlashService) {
+        $scope.hasFlashes = function () {
+            return FlashService.hasFlashes();
         };
-    })
-    .controller('SomeController', function ($scope) {
-        $scope.initSomeModel = function () {
-            return 'SomeModel';
+        $scope.getFlashes = function () {
+            return FlashService.getFlashes();
         };
+        $scope.dismiss = function (index) {
+            return FlashService.dismiss(index);
+        };
+        $scope.dismissAll = function () {
+            return FlashService.dismissAll();
+        }
     });

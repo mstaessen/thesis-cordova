@@ -1,0 +1,20 @@
+<div class="container-fluid-reflow">
+    <div class="row-fluid">
+        <div class="span4 offset4">
+            <div class="margin10">
+                <form class="form" ng-controller="AuthController" ng-submit="login()">
+                    <h2 style="text-align: center;">Please sign in</h2>
+
+                    <flashes></flashes>
+
+                    <input type="email" class="input-block-level" placeholder="Email address" ng-model="email"
+                           autofocus="autofocus" ng-disabled="busy"/>
+                    <input type="password" class="input-block-level" placeholder="Password" ng-model="password"
+                           required="required" ng-disabled="busy"/>
+                    <input type="submit" class="btn btn-large btn-primary btn-block" value="Sign in"
+                           ng-disabled="busy"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

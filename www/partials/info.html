@@ -1,0 +1,64 @@
+<div id="secondary">
+    <nav class="margin10">
+        <ul class="nav nav-tabs nav-stacked">
+            <li class="active"><a href="#/create/info"><i class="icon-chevron-right pull-right"></i> 1. Info</a></li>
+            <li><a href="#/create/overview"><i class="icon-chevron-right pull-right"></i> 2. Overview</a></li>
+            <li><a href="#/create/add"><i class="icon-chevron-right pull-right"></i> 3. Add Expense</a></li>
+            <li><a href="#/create/sign"><i class="icon-chevron-right pull-right"></i> 4. Sign &amp; Send</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="primary">
+    <div class="margin10">
+        <div class="fluid-container">
+            <div class="navbar row-fluid">
+                <div class="navbar-inner">
+                    <span class="brand-center">1. Your Info</span>
+                </div>
+            </div>
+
+            <flashes></flashes>
+
+            <form class="form" ng-controller="ExpenseFormController">
+                <div class="controls row-fluid">
+                    <select ng-init="currentForm.date.month=10" ng-model="currentForm.date.month" class="span6">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                    <input type="number" ng-model="currentForm.date.year" class="span6" placeholder="year" />
+                </div>
+                <div class="controls row-fluid">
+                    <input class="span12" type="text" ng-model="currentForm.user.name.first" disabled/>
+                </div>
+                <div class="controls row-fluid">
+                    <input class="span12" type="text" ng-model="currentForm.user.name.last" disabled/>
+                </div>
+                <div class="controls row-fluid">
+                    <input class="span12" type="number" ng-model="currentForm.user.number"/>
+                </div>
+                <div class="controls row-fluid">
+                    <select class="span12" ng-model="currentForm.user.unit">
+                        <option ng-repeat="unit in units" value="{{unit.id}}">{{unit.name}}</option>
+                    </select>
+                </div>
+                <div class="controls row-fluid">
+                    <input class="span12" type="email" ng-model="currentForm.user.email"/>
+                </div>
+                <div class="form-actions">
+                    <a href="#/create/overview" class="btn btn-primary pull-right">Next</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+@import "variables"; // Modify this for custom colors, font-sizes, etc
+@import "mixins";
+
+// Phone UI
+@media (orientation: portrait) and (max-width: 641px),
+       (orientation: landscape) and (max-height: 481px ) {
+  #primary {
+    width: 100%;
+  }
+
+  #secondary {
+    display: none;
+  }
+
+  .container-fluid-reflow [class*="span"],
+  .container-fluid-reflow .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+  .container-fluid-reflow .row-fluid [class*="span"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    .box-sizing(border-box);
+  }
+  .container-fluid-reflow .span12,
+  .container-fluid-reflow .row-fluid .span12 {
+    width: 100%;
+    .box-sizing(border-box);
+  }
+  .container-fluid-reflow .row-fluid [class*="offset"]:first-child {
+    margin-left: 0;
+  }
+}
+
+// Tablet UI
+@media (orientation: portrait) and (min-width: 642px),
+       (orientation: landscape) and (min-height: 482px ) {
+  #primary {
+    width: 70%;
+  }
+
+  #secondary {
+    width: 30%;
+  }
+}

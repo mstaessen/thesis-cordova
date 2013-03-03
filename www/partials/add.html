@@ -1,0 +1,78 @@
+<div id="secondary">
+    <nav class="margin10">
+        <ul class="nav nav-tabs nav-stacked">
+            <li><a href="#/create/info"><i class="icon-chevron-right pull-right"></i> 1. Info</a></li>
+            <li><a href="#/create/overview"><i class="icon-chevron-right pull-right"></i> 2. Overview</a></li>
+            <li class="active"><a href="#/create/add"><i class="icon-chevron-right pull-right"></i> 3. Add Expense</a></li>
+            <li><a href="#/create/sign"><i class="icon-chevron-right pull-right"></i> 4. Sign &amp; Send</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="primary">
+    <div class="margin10">
+        <div class="fluid-container">
+            <div class="navbar row-fluid">
+                <div class="navbar-inner">
+                    <span class="brand-center">3. Add Expense</span>
+                </div>
+            </div>
+
+            <flashes></flashes>
+
+            <form class="form">
+                <div class="controls row-fluid">
+                    <div class="btn-group span12" style="text-align: center; margin-bottom: 10px;">
+                        <button class="btn">Abroad</button>
+                        <button class="btn">Domestic</button>
+                    </div>
+                </div>
+
+                <div class="controls row-fluid">
+                    <input type="date" class="span12"/>
+                </div>
+
+                <div class="controls row-fluid">
+                    <input type="text" class="span12" placeholder="Project code" data-provide="typeahead"
+                           data-items="4" data-source='["Een", "Twee", "Drie"]'/>
+                </div>
+
+                <div class="controls">
+                    <div class="row-fluid">
+                        <label class="radio span6"><input name="type" type="radio"/> Hotel</label>
+                        <label class="radio span6"><input name="type" type="radio"/> Transportation</label>
+                    </div>
+                    <div class="row-fluid">
+                        <label class="radio span6"><input name="type" type="radio"/> Restaurant (Lunch)</label>
+                        <label class="radio span6"><input name="type" type="radio"/> Restaurant (Diner)</label>
+                    </div>
+                    <div class="row-fluid">
+                        <label class="radio span6"><input name="type" type="radio"/> Other (Please specify)</label>
+                    </div>
+                </div>
+
+                <div class="controls row-fluid">
+                    <span class="span1">&euro;</span>
+                    <input type="number" class="span5" placeholder="Amount"/>
+                </div>
+
+                <div class="controls row-fluid">
+                    <textarea class="span12" placeholder="Remarks"></textarea>
+                </div>
+
+                <div class="controls row-fluid">
+                    <button class="btn">Add Evidence</button>
+                </div>
+
+                <div class="form-actions">
+                    <div class="pull-left">
+                        <a class="btn" href="#/create/overview">Back</a>
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" href="#/create/sign">Sign &amp; Send</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

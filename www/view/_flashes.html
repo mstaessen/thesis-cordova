@@ -1,0 +1,8 @@
+<div ng-controller="FlashController">
+    <div ng-show="hasFlashes()">
+        <div ng-repeat="flash in getFlashes()" class="{{flash.type | alertClass}}">
+            <button type="button" class="close" ng-click="dismiss($index)">&times;</button>
+            {{flash.msg}}
+        </div>
+    </div>
+</div>

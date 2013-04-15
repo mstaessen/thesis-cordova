@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div id="primary" class="col-span-9 col-push-3">
+            <div class="navbar">
+                <a class="navbar-brand" href="#">3. Add Expense</a>
+            </div>
+
+            <flashes></flashes>
+
+            <form>
+                <div class="control-group text-center">
+                    <div class="btn-group">
+                        <a class="btn btn-primary active">Abroad</a>
+                        <a class="btn">Domestic</a>
+                    </div>
+                </div>
+
+                <input type="date" min="2013-02-14" max="2013-04-14" class="col-span-12" placeholder="Date of expense"/>
+
+                <input type="text" class="col-span-12" placeholder="Project Code"/>
+
+                <div class="radio col-span-6">
+                    <label>
+                        <input type="radio" value="hotel"/> Hotel
+                    </label>
+                </div>
+                <div class="radio col-span-6">
+                    <label>
+                        <input type="radio" value="hotel"/> Train / Plane Tickets
+                    </label>
+                </div>
+                <div class="radio col-span-6">
+                    <label>
+                        <input type="radio" value="hotel"/> Restaurant (Lunch)
+                    </label>
+                </div>
+                <div class="radio col-span-6">
+                    <label>
+                        <input type="radio" value="hotel"/> Restaurant (Diner)
+                    </label>
+                </div>
+                <div class="radio col-span-6">
+                    <label>
+                        <input type="radio" value="hotel"/> Other (Please specify)
+                    </label>
+                </div>
+
+                <div class="input-group col-span-4">
+                    <span class="input-group-addon">&euro;</span>
+                    <input type="number" placeholder="Amount">
+                </div>
+
+                <div class="input-group col-span-4">
+                    <input type="number">
+                    <div class="input-group-btn">
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">Currency <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a ng-click="">EUR</a></li>
+                            <li><a ng-click="">USD</a></li>
+                            <li><a ng-click="">GBP</a></li>
+                            <li><a ng-click="">AUD</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <textarea class="col-span-12" rows="3" placeholder="Remarks"></textarea>
+
+                <div class="form-actions">
+                    <div class="pull-left">
+                        <!-- Evidence placeholder -->
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary">Upload Evidence</a>
+                        <a href="#/wizard/overview" class="btn btn-primary">Next</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div id="secondary" class="col-span-3 col-pull-9 hidden-phone">
+            <div ng-include src="'view/wizard/_menu.html'"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div id="primary" class="col-span-9 col-push-3">
+            <div class="navbar">
+                <a class="navbar-brand" href="#">1. Your Info</a>
+            </div>
+
+            <flashes></flashes>
+
+            <form>
+                <select class="col-span-6">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select class="col-span-5 pull-right">
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                </select>
+
+                <input type="text" class="col-span-12" disabled placeholder="First Name"/>
+
+                <input type="text" class="col-span-12" disabled placeholder="Last Name"/>
+
+                <input type="number" class="col-span-12" placeholder="Employee Number"/>
+
+                <select class="col-span-12">
+                    <option value=""></option>
+                </select>
+
+                <input type="email" class="col-span-12" disabled placeholder="Email"/>
+
+                <div class="form-actions">
+                    <div class="pull-right">
+                        <a href="#/wizard/overview" class="btn btn-primary">Next</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div id="secondary" class="col-span-3 col-pull-9 hidden-phone">
+            <div ng-include src="'view/wizard/_menu.html'"></div>
+        </div>
+    </div>
+</div>

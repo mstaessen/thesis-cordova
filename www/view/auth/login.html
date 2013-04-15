@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-span-4 col-offset-4">
+            <form class="form-horizontal" ng-controller="AuthController" ng-submit="login()">
+                <h2 class="text-center">Please sign in</h2>
+
+                <flashes></flashes>
+
+                <div class="control-group">
+                    <input type="email" value="michiel.staessen@student.kuleuven.be" ng-model="email" ng-disabled="busy"
+                           autofocus="autofocus" placeholder="Email"/>
+                </div>
+                <div class="control-group">
+                    <input type="password" value="test123" ng-model="password" ng-disabled="busy" required="required"
+                           placeholder="Password"/>
+                </div>
+                <button type="submit" class="btn btn-large btn-primary btn-block" ng-disabled="busy">Sign in</button>
+            </form>
+        </div>
+    </div>
+</div>

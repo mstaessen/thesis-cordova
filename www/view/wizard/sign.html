@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div id="primary" class="col-span-9 col-push-3">
+            <div class="navbar">
+                <a class="navbar-brand" href="#">4. Sign &amp; Send</a>
+            </div>
+
+            <flashes></flashes>
+
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <!-- Signature placeholder  -->
+                </div>
+
+                <div class="control-group">
+                    <textarea class="col-span-12" rows="3" placeholder="Remarks"></textarea>
+                </div>
+
+                <div class="control-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" /> Status notification via email
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <div class="pull-right">
+                        <a href="#/wizard/overview" class="btn btn-primary">Send</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div id="secondary" class="col-span-3 col-pull-9 hidden-phone">
+            <div ng-include src="'view/wizard/_menu.html'"></div>
+        </div>
+    </div>
+</div>

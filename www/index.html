@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app="app">
+<head>
+    <title>ExpenseApp</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet/less" media="screen" href="assets/less/bootstrap.less"/>
+    <link type="text/css" rel="stylesheet/less" media="screen" href="assets/less/application.less"/>
+
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script>
+        jQuery.noConflict();
+    </script>
+    <script src="assets/js/less-1.3.3.min.js"></script>
+
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-resource.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/app.controllers.js"></script>
+    <script src="app/app.directives.js"></script>
+    <script src="app/app.filters.js"></script>
+    <script src="app/app.services.js"></script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </a>
+        <a class="navbar-brand" href="#">ExpenseApp</a>
+
+        <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+                <li><a class="btn btn-danger" href="#"><span class="glyphicon glyphicon-lock"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ng-view></ng-view>
+
+<div class="navbar navbar-fixed-bottom">
+    <div class="container">
+        <ul class="nav">
+            <li><a href="http://www.kuleuven.be">KU Leuven</a></li>
+        </ul>
+        <ul class="nav pull-right">
+            <li><a href="http://www.capgemini.com">CapGemini</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="assets/js/bootstrap-affix.js"></script>
+<script src="assets/js/bootstrap-alert.js"></script>
+<script src="assets/js/bootstrap-button.js"></script>
+<script src="assets/js/bootstrap-carousel.js"></script>
+<script src="assets/js/bootstrap-collapse.js"></script>
+<script src="assets/js/bootstrap-dropdown.js"></script>
+<script src="assets/js/bootstrap-modal.js"></script>
+<script src="assets/js/bootstrap-tooltip.js"></script>
+<script src="assets/js/bootstrap-popover.js"></script>
+<script src="assets/js/bootstrap-scrollspy.js"></script>
+<script src="assets/js/bootstrap-tab.js"></script>
+<script src="assets/js/bootstrap-transition.js"></script>
+<script src="assets/js/bootstrap-typeahead.js"></script>
+</body>
+</html>
